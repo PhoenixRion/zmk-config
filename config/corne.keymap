@@ -43,22 +43,22 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | L2       |
 //                    | CTL | SPC | BSP |   | ALT | ENT  | TAB |
         default_layer { bindings = <
-    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    SL_TOG(1)
-    &kp LGUI  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &mt RSHFT SQT
-    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH SL_TOG(2)
-              &kp LCTRL &kp SPACE &kp BSPC   &kp ENTER &kp TAB &kp RALT
+    &kp ESC   &kp Q &kp W &kp E     &kp R     &kp T      &kp Y     &kp U   &kp I     &kp O   &kp P    SL_TOG(1)
+    &kp LGUI  &kp A &kp S &kp D     &kp F     &kp G      &kp H     &kp J   &kp K     &kp L   &kp SEMI &mt RSHFT SQT
+    &kp LSHFT &kp Z &kp X &kp C     &kp V     &kp B      &kp N     &kp M   &kp COMMA &kp DOT &kp FSLH SL_TOG(2)
+                          &kp LCTRL &kp SPACE &kp BSPC   &kp ENTER &kp TAB &kp RALT
         >; };
 
 // ------------------------------------------------------------------------------------
 // |  L0  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | xxx |
-// |      | LFT | DWN | UP  | RGT |     |   |     |     | SAD | SAI |     |     |
-// |  F1  | F2  | F3  | F4  | F5  | F6  |   |     |     | VDN | VUP |     | xxx |
+// |      | LFT | DWN | UP  | RGT |     |   | SAD | SAI | HUD | HUI |     |     |
+// |  F1  | F2  | F3  | F4  | F5  | F6  |   | BRD | BRI | VDN | VUP |     | xxx |
 //                    |     |     | DEL |   |     |     |     |
         lower_layer { bindings = <
-    &tog 1 &kp N1   &kp N2    &kp N3   &kp N4    &kp N5   &kp N6 &kp N7 &kp N8          &kp N9          &kp N0  &none
-    &trans &kp LEFT &kp DOWN  &kp UP   &kp RIGHT &trans   &trans &trans &rgb_ug RGB_SAD &rgb_ug RGB_SAI &trans  &trans
-    &kp F1 &kp F2   &kp F3    &kp F4   &kp F5    &kp F6   &trans &trans &kp C_VOL_DN    &kp C_VOL_UP    &trans  &none
-                             &trans    &trans    &kp DEL  &trans &trans &trans
+    &tog 1 &kp N1   &kp N2    &kp N3   &kp N4    &kp N5   &kp N6          &kp N7          &kp N8          &kp N9          &kp N0  &none
+    &trans &kp LEFT &kp DOWN  &kp UP   &kp RIGHT &trans   &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &trans  &trans
+    &kp F1 &kp F2   &kp F3    &kp F4   &kp F5    &kp F6   &rgb_ug RGB_BRD &rgb_ug RGB_BRI &kp C_VOL_DN    &kp C_VOL_UP    &trans  &none
+                              &trans   &trans    &kp DEL  &trans          &trans          &trans
         >; };
 
 // ------------------------------------------------------------------------------------
