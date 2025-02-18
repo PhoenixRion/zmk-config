@@ -51,13 +51,13 @@
 
 // ------------------------------------------------------------------------------------
 // |  L0  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | xxx |
-// |      | LFT | DWN | UP  | RGT |     |   |     |     |     |     |     |     |
+// |      | LFT | DWN | UP  | RGT |     |   |     |     | SAD | SAI |     |     |
 // |  F1  | F2  | F3  | F4  | F5  | F6  |   |     |     | VDN | VUP |     | xxx |
 //                    |     |     | DEL |   |     |     |     |
         lower_layer { bindings = <
-    &tog 1 &kp N1   &kp N2    &kp N3   &kp N4    &kp N5   &kp N6 &kp N7 &kp N8       &kp N9       &kp N0  &none
-    &trans &kp LEFT &kp DOWN  &kp UP   &kp RIGHT &trans   &trans &trans &trans       &trans       &trans  &trans
-    &kp F1 &kp F2   &kp F3    &kp F4   &kp F5    &kp F6   &trans &trans &kp C_VOL_UP &kp C_VOL_DN &trans  &none
+    &tog 1 &kp N1   &kp N2    &kp N3   &kp N4    &kp N5   &kp N6 &kp N7 &kp N8          &kp N9          &kp N0  &none
+    &trans &kp LEFT &kp DOWN  &kp UP   &kp RIGHT &trans   &trans &trans &rgb_ug RGB_SAD &rgb_ug RGB_SAI &trans  &trans
+    &kp F1 &kp F2   &kp F3    &kp F4   &kp F5    &kp F6   &trans &trans &kp C_VOL_DN    &kp C_VOL_UP    &trans  &none
                              &trans    &trans    &kp DEL  &trans &trans &trans
         >; };
 
