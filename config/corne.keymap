@@ -50,27 +50,27 @@
         >; };
 
 // -----------------------------------------------------------------------------
-// | L0 |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | xxxx |
-// |    | LFT | DWN | UP  | RGT |     |   | SAD | SAI | HUD | HUI |     |      |
-// | F1 | F2  | F3  | F4  | F5  | F6  |   | BRD | BRI | VDN | VUP |     | xxxx |
+// | L0 |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | xxx |
+// |    | LFT | DWN | UP  | RGT | xxx |   | SAD | SAI | HUD | HUI | SCU | xxx |
+// | F1 | F2  | F3  | F4  | F5  | F6  |   | BRD | BRI | VDN | VUP | SCD | xxx |
 //                  | DEL |     |     |   |     |     |  .  |
         raise_layer { bindings = <
-    &tog 1 &kp N1   &kp N2    &kp N3   &kp N4    &kp N5   &kp N6          &kp N7          &kp N8          &kp N9          &kp N0  &none
-    &trans &kp LEFT &kp DOWN  &kp UP   &kp RIGHT &trans   &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &trans  &trans
-    &kp F1 &kp F2   &kp F3    &kp F4   &kp F5    &kp F6   &rgb_ug RGB_BRD &rgb_ug RGB_BRI &kp C_VOL_DN    &kp C_VOL_UP    &trans  &none
-                              &kp DEL  &trans    &trans   &trans          &trans          &kp DOT
+    &tog 1 &kp N1   &kp N2   &kp N3  &kp N4    &kp N5 &kp N6          &kp N7          &kp N8          &kp N9          &kp N0         &none
+    &trans &kp LEFT &kp DOWN &kp UP  &kp RIGHT &none  &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &msc SCRL_UP   &none
+    &kp F1 &kp F2   &kp F3   &kp F4  &kp F5    &kp F6 &rgb_ug RGB_BRD &rgb_ug RGB_BRI &kp C_VOL_DN    &kp C_VOL_UP    &msc SCRL_DOWN &none
+                             &kp DEL &trans    &trans &trans          &trans          &kp DOT
         >; };
 
 // -----------------------------------------------------------------------------
-// | L0 |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | xxxx |
-// |    | HME | PDN | PUP | END |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-// | F7 | F8  | F9  | F10 | F11 | F12 |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-//                  | xxx |     |     |   |     |     | xxx |
+// | L0 |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | xxx |
+// |    | HME | PDN | PUP | END | xxx |   |  _  |  +  |  {  |  }  | "|" |  ~  |
+// | F7 | F8  | F9  | F10 | F11 | F12 |   |  -  |  =  |  [  |  ]  |  \  |  `  |
+//                  | xxx |     |     |   |     | MB1 | MB2 |
         lower_layer { bindings = <
-    &tog 2 &kp EXCL &kp AT    &kp HASH  &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &none
-    &trans &kp HOME &kp PG_DN &kp PG_UP &kp END  &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-    &kp F7 &kp F8   &kp F9    &kp F10   &kp F11  &kp F12     &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-                              &none     &trans   &trans      &trans    &trans    &none
+    &tog 2 &kp EXCL &kp AT    &kp HASH  &kp DLLR &kp PRCNT &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &none
+    &trans &kp HOME &kp PG_DN &kp PG_UP &kp END  &none     &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+    &kp F7 &kp F8   &kp F9    &kp F10   &kp F11  &kp F12   &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
+                              &none     &trans   &trans    &trans    &mkp LCLK &mkp RCLK
         >; };
     };
 };
