@@ -13,7 +13,7 @@
 #define SL_TOG(layer) &sl_tog layer layer // Macro for "sticky layer" on tap "tog layer" on hold
 
 &mt {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <250>;
 };
 
 &sl {
